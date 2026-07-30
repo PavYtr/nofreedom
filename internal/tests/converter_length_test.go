@@ -1,14 +1,15 @@
-package converter
+package tests
 
 import (
-	"github.com/PavYtr/nofreedom/internal/converter"
 	"math"
 	"testing"
+
+	"github.com/PavYtr/nofreedom/internal/converter"
 )
 
 const tolerance = 0.001
 
-func TestConvertNormalToFreedom(t *testing.T) {
+func TestConvertLengthNormalToFreedom(t *testing.T) {
 	value := 451.0
 	from := "m"
 	to := "mi"
@@ -23,7 +24,7 @@ func TestConvertNormalToFreedom(t *testing.T) {
 	}
 }
 
-func TestConvertFreedomToNormal(t *testing.T) {
+func TestConvertLengthFreedomToNormal(t *testing.T) {
 	value := 13.0
 	from := "mi"
 	to := "km"
@@ -38,7 +39,7 @@ func TestConvertFreedomToNormal(t *testing.T) {
 	}
 }
 
-func TestConvertUnknownUnit(t *testing.T) {
+func TestConvertLengthUnknownUnit(t *testing.T) {
 	value := 13.0
 	from := "mi"
 	to := "some_bs_unit"
@@ -55,7 +56,7 @@ func TestConvertUnknownUnit(t *testing.T) {
 	}
 }
 
-func TestConvertIncompatibleUnits(t *testing.T) {
+func TestConvertLengthIncompatibleUnits(t *testing.T) {
 	value := 13.0
 	from := "mi"
 	to := "kg"
@@ -72,7 +73,7 @@ func TestConvertIncompatibleUnits(t *testing.T) {
 	}
 }
 
-func TestConvertSameKindOfUnitFreedom(t *testing.T) {
+func TestConvertLengthSameKindOfUnitFreedom(t *testing.T) {
 	value := 2077.0
 	from := "mi"
 	to := "ft"
@@ -87,7 +88,7 @@ func TestConvertSameKindOfUnitFreedom(t *testing.T) {
 	}
 }
 
-func TestConvertSameKindOfUnitNormal(t *testing.T) {
+func TestConvertLengthSameKindOfUnitNormal(t *testing.T) {
 	value := 2077.0
 	from := "km"
 	to := "m"

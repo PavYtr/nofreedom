@@ -1,6 +1,6 @@
 package units
 
-var RegistryLength = map[string]Unit{
+var Registry = map[string]Unit{
 	"m":  Meter,
 	"km": Kilometer,
 	"mm": Millimeter,
