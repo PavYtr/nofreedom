@@ -8,8 +8,9 @@ const (
 )
 
 type Unit struct {
-	Name      string
-	Symbol    string
-	Category  Category
-	coeffBase float64
+	Name       string
+	Symbol     string
+	Category   Category
+	Style      string
+	BaseFactor float64
 }
