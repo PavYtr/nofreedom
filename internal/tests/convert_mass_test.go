@@ -63,7 +63,7 @@ func TestConvertMassFreedomToNormal(t *testing.T) {
 	to1 := "kg"
 	to2 := "g"
 	expected1 := 4.53592
-	expected2 := 4535.92
+	expected2 := 4535.9237
 
 	result1, err := converter.Convert(value, from, to1)
 	if err != nil {
