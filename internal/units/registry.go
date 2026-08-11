@@ -17,22 +17,26 @@ var Registry = map[string]Unit{
 	"oz": Ounce,
 }
 
-var RegistryByCategory = map[Category][]Unit{
-	Length: {
-		Meter,
-		Kilometer,
-		Millimeter,
-		Centimeter,
-		Mile,
-		Foot,
-		Yard,
-		Inch,
-	},
-	Mass: {
-		Kilogram,
-		Gram,
-		Milligram,
-		Pound,
-		Ounce,
-	},
+var LengthUnits = []Unit{
+	Meter,
+	Kilometer,
+	Centimeter,
+	Millimeter,
+	Foot,
+	Mile,
+	Inch,
+	Yard,
+}
+
+var MassUnits = []Unit{
+	Kilogram,
+	Gram,
+	Milligram,
+	Pound,
+	Ounce,
+}
+
+var RegistryByCategory = [][]Unit{
+	LengthUnits,
+	MassUnits,
 }

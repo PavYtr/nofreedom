@@ -2,6 +2,7 @@ package cli
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 
 	"github.com/PavYtr/nofreedom/internal/converter"
@@ -21,6 +22,10 @@ var convertCmd = &cobra.Command{
 		if err != nil {
 			return fmt.Errorf("invalid value %q: expected a number", args[0])
 		}
+		if math.IsInf(val, 0) || math.IsNaN(val) {
+			return fmt.Errorf("invalid value %q: expected a number", args[0])
+		}
+
 		from := args[1]
 		to := args[2]
 
@@ -28,7 +33,7 @@ var convertCmd = &cobra.Command{
 		if err != nil {
 			return fmt.Errorf("convert %q to %q: %w", from, to, err)
 		}
-		cmd.Printf("%.2f\n", result)
+		cmd.Println(strconv.FormatFloat(result, 'f', -1, 64))
 		return nil
 	},
 }

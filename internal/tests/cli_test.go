@@ -33,8 +33,8 @@ func TestConvertCommandSuccess(t *testing.T) {
 	if stderr != "" {
 		t.Errorf("Expected no error, got: %v", stderr)
 	}
-	if stdout != "1000000.00\n" {
-		t.Errorf("Expected output '1000000.00', got: %v", stdout)
+	if stdout != "1000000\n" {
+		t.Errorf("Expected output '1000000', got: %v", stdout)
 	}
 }
 
