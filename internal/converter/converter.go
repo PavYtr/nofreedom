@@ -12,7 +12,7 @@ func Convert(value float64, from string, to string) (float64, error) {
 		return 0, ErrUnknownUnit{Unit: to}
 	}
 	if fromUnit.Category != toUnit.Category {
-		return 0, ErrIncompatubleUnits{ToUnit: to, FromUnit: from}
+		return 0, ErrIncompatibleUnits{ToUnit: to, FromUnit: from}
 	}
 
 	result := value * fromUnit.BaseFactor / toUnit.BaseFactor

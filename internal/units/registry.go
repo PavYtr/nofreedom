@@ -16,3 +16,23 @@ var Registry = map[string]Unit{
 	"lb": Pound,
 	"oz": Ounce,
 }
+
+var RegistryByCategory = map[Category][]Unit{
+	Length: {
+		Meter,
+		Kilometer,
+		Millimeter,
+		Centimeter,
+		Mile,
+		Foot,
+		Yard,
+		Inch,
+	},
+	Mass: {
+		Kilogram,
+		Gram,
+		Milligram,
+		Pound,
+		Ounce,
+	},
+}

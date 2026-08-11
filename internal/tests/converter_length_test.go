@@ -65,8 +65,8 @@ func TestConvertLengthIncompatibleUnits(t *testing.T) {
 	if err == nil {
 		t.Errorf("Should produce an error")
 	}
-	if _, ok := err.(converter.ErrIncompatubleUnits); !ok {
-		t.Errorf("Error should be of type ErrIncompatubleUnits")
+	if _, ok := err.(converter.ErrIncompatibleUnits); !ok {
+		t.Errorf("Error should be of type ErrIncompatibleUnits")
 	}
 	if result != 0 {
 		t.Errorf("Result should be 0, got: %f", result)
